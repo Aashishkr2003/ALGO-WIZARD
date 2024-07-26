@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #343f51;
+}
+
+#main {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+#header {
+  flex: 0 1 80px;
+  background-color: #343f51;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 38.88px; /* Increased by another 20% from 32.4px */
+  color: black;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+#container {
+  flex: 1 1 auto;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.algo-container {
+  flex: 25%;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.imageContainer {
+  max-width: 90%;
+  margin: 10px auto;
+}
+
+.imageContainer:hover {
+  max-width: 97%;
+  animation: transition 0.2s;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+#header {
+  flex: 0 1 80px;
+  background-color: #343f51;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure parent is relatively positioned */
+}
+
+.logo {
+  width: 252px; /* Adjust size as needed */
+  height: auto;
+  position: absolute; /* Position absolutely within parent */
+  left: 50%; /* Center horizontally */
+  top: 66px;
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+@keyframes transition {
+  from {
+    max-width: 90%;
+  }
+  to {
+    max-width: 97%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #dcebff;
+  font-size: 20px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    flex: 0 0 48%;
+  }
+}
+
+/* Added CSS for ALGO WIZARD heading */
+.animated-heading {
+  font-size: 5.76rem; /* Increased by another 20% from 4.8rem */
+  animation: colorChange 5s linear infinite, textShadow 2s ease-in-out infinite alternate;
+  text-align: center;
+  color: #ff6347;
+  margin: 20px 0;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff6347; /* tomato */
+  }
+  25% {
+    color: #ffb6c1; /* lightpink */
+  }
+  50% {
+    color: #add8e6; /* lightblue */
+  }
+  75% {
+    color: #90ee90; /* lightgreen */
+  }
+  100% {
+    color: #ff6347; /* tomato */
+  }
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 40px #ff6347, 0 0 50px #ff6347;
+  }
+  100% {
+    text-shadow: 0 0 10px #90ee90, 0 0 20px #90ee90, 0 0 30px #90ee90, 0 0 40px #90ee90, 0 0 50px #90ee90;
+  }
+}
